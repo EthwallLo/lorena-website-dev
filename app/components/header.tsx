@@ -6,11 +6,11 @@ import { Heart, Menu, X } from "lucide-react"
 
 const navigation = [
   { name: "Accueil", href: "#hero" },
-  { name: "Moi", href: "#about" },
-  { name: "Stack", href: "#skills" },
-  { name: "Missions", href: "#projects" },
+  { name: "Approche", href: "#about" },
+  { name: "Technos", href: "#skills" },
+  // { name: "Missions", href: "#projects" },
   { name: "Parcours", href: "#experience" },
-  { name: "Formation", href: "#education" },
+  { name: "Formations", href: "#education" },
   { name: "Contact", href: "#contact" },
 ]
 
@@ -71,6 +71,14 @@ export function Header() {
 
     const element = document.getElementById(section)
     if (element) {
+      if (section === "about") {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        })
+        return
+      }
+
       window.scrollTo({
         top: element.offsetTop - 88,
         behavior: "smooth",
@@ -97,7 +105,7 @@ export function Header() {
               }}
               className="leading-tight"
             >
-              <span className="flex items-center gap-2 font-display text-lg font-extrabold text-[#3d2230]">
+              <span className="flex items-center gap-2 font-display text-lg font-extrabold text-foreground">
                 <Heart size={18} className="fill-pink-300 text-pink-400" />
                 Lorena Guedouani
               </span>
@@ -171,7 +179,7 @@ export function Header() {
                 event.preventDefault()
                 handleNavClick(item.href, index)
               }}
-              className="text-2xl font-semibold text-[#3d2230] transition hover:text-pink-500"
+              className="text-2xl font-semibold text-foreground transition hover:text-pink-500"
             >
               {item.name}
             </a>

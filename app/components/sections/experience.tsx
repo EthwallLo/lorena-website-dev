@@ -54,14 +54,16 @@ const experiences = [
     ],
   },
   {
-    title: "Correction & rédaction technique",
+    title: "Correctrice - relectrice",
     company: "Au mot juste",
     location: "Grenoble · à distance",
     period: "Janv. 2026 - aujourd’hui",
     type: "Freelance",
     achievements: [
-      "Activité complémentaire de relecture et structuration de contenus.",
+      "Activité de correction, relecture et structuration de contenus.",
       "Une exigence utile côté dev : documentation claire, écrans compréhensibles et consignes lisibles.",
+      "Pour les particuliers, professionnels et maisons d'édition : vérification des informations, réécriture, mise en page, relecture.",
+      "Pour des documents personnels (CV, documents administratifs), des travaux universitaires (mémoire, projets de recherche), ou encore des manuscrits ou contenus web."
     ],
   },
 ]
@@ -73,13 +75,8 @@ export function Experience() {
         <div className="mb-12 max-w-3xl">
           <p className="section-kicker">Parcours</p>
           <h2 className="section-title mt-3">
-            Des environnements exigeants, beaucoup de concret.
+            Des expériences concrètes dans des environnements exigeants.
           </h2>
-          <p className="mt-5 text-base leading-8 text-[#7a5265]">
-            J’ai travaillé sur des outils métier, des interfaces, du back-end industriel, des
-            scripts, de la CI/CD, de la documentation et des bases de données. Ce que j’en garde :
-            une vraie habitude du contexte, du legacy et des contraintes réelles.
-          </p>
         </div>
 
         <div className="relative border-l border-pink-200 pl-5 md:pl-8">
@@ -91,7 +88,7 @@ export function Experience() {
                   <div className="mb-4 inline-flex rounded-lg bg-pink-100 px-3 py-1 text-xs font-bold text-pink-700">
                     {exp.type}
                   </div>
-                  <h3 className="font-display text-2xl font-black text-[#3d2230]">{exp.title}</h3>
+                  <h3 className="font-display text-2xl font-black text-foreground">{exp.title}</h3>
                   <p className="mt-2 text-lg font-semibold text-pink-600">{exp.company}</p>
                   <div className="mt-5 grid gap-2 text-sm text-[#8a6475]">
                     <span className="inline-flex items-center gap-2">

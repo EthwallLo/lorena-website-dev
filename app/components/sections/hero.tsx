@@ -23,7 +23,7 @@ const notes = [
 
 export function Hero() {
   const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", block: "start" })
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth", block: "center" })
   }
 
   return (
@@ -34,13 +34,13 @@ export function Hero() {
             Développeuse freelance
           </p>
 
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(3.2rem,10vw,8rem)] font-black leading-[0.9] text-[#3d2230]">
+          <h1 className="mt-6 max-w-5xl font-display text-[clamp(3.2rem,10vw,8rem)] font-black leading-[0.9] text-foreground">
             Lorena
             <span className="block text-pink-500">Guedouani</span>
           </h1>
 
           <div className="mt-8 max-w-3xl rounded-lg border border-pink-200 bg-white/82 p-5 shadow-sm">
-            <p className="text-2xl font-semibold leading-snug text-[#3d2230] md:text-3xl">
+            <p className="text-2xl font-semibold leading-snug text-foreground md:text-3xl">
               Je développe des applications et des sites{" "}
               <span className="personal-underline">clairs, solides et agréables à maintenir</span>.
             </p>
@@ -110,7 +110,7 @@ export function Hero() {
                     <span className="text-xs font-bold uppercase tracking-[0.16em] text-pink-400/75">
                       {label}
                     </span>
-                    <span className="text-right text-sm font-bold text-[#3d2230]">{value}</span>
+                    <span className="text-right text-sm font-bold text-foreground">{value}</span>
                   </div>
                 ))}
               </div>

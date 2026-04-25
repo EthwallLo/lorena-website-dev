@@ -1,48 +1,70 @@
-import { Brain, Database, FileCode2, GitBranch, ShieldCheck, Terminal, Wrench } from "lucide-react"
+import {
+  Brain,
+  Code2,
+  Database,
+  FileCode2,
+  GitBranch,
+  MonitorCog,
+  ShieldCheck,
+  Terminal,
+} from "lucide-react"
 
 const mainStacks = [
   {
-    title: "Front applicatif",
-    subtitle: "Interfaces métier, formulaires, parcours, écrans internes",
-    skills: ["PHP", "Symfony", "Twig", "HTML", "CSS", "JavaScript"],
+    title: "Front-end & front applicatif",
+    skills: ["HTML5", "CSS3", "JavaScript", "Symfony", "WordPress", "XML"],
   },
   {
     title: "Back-end & logiciel",
-    subtitle: "Logique métier, outils industriels, automatisation logicielle",
-    skills: ["Ada", "C#", ".NET", "MVC", "MVVM", "WPF"],
+    skills: ["C#", ".NET", "Ada", "PHP", "Python", "Bash", "Java", "SQL"],
   },
 ]
 
 const supportStacks = [
   {
-    title: "Automatisation",
-    icon: Terminal,
-    skills: ["Python", "PyQt", "Bash", "Multithreading", "Reporting"],
-  },
-  {
-    title: "Qualité",
-    icon: GitBranch,
-    skills: ["Docker", "CI/CD", "Git", "SVN", "FlaUI", "SpecFlow"],
-  },
-  {
-    title: "Données",
+    title: "Bases de données",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "Optimisation SQL", "Modélisation"],
+    skills: ["PostgreSQL", "MySQL", "Optimisation", "Refactorisation", "Modélisation"],
   },
   {
-    title: "Cadrage",
-    icon: Brain,
-    skills: ["Analyse du besoin", "Spécifications", "Documentation", "Figma"],
-  },
-  {
-    title: "Accessibilité",
+    title: "Tests & qualité",
     icon: ShieldCheck,
-    skills: ["WCAG", "W3C", "Audit d’interface", "Performance"],
+    skills: ["TDD", "FlaUI", "SpecFlow", "Tests automatisés", "Tests unitaires", "Non-régression", "Refactoring"],
   },
   {
-    title: "Maintenance",
-    icon: Wrench,
-    skills: ["Refactoring", "Legacy", "Debug", "Architecture"],
+    title: "CI/CD & versioning",
+    icon: GitBranch,
+    skills: ["CI/CD", "Git", "GitHub", "GitLab", "SVN", "Jenkins", "Azure DevOps"],
+  },
+  {
+    title: "Outils & environnements",
+    icon: MonitorCog,
+    skills: ["Docker", "VirtualBox", "VMWare", "Windows", "Linux", "Jira", "Office", "LaTeX"],
+  },
+  {
+    title: "Automatisation & data",
+    icon: Terminal,
+    skills: ["Python", "PyQt", "Bash", "Multithreading", "Reporting", "Comparaison de binaires"],
+  },
+  {
+    title: "Cadrage & documentation",
+    icon: Brain,
+    skills: ["Analyse du besoin", "Gestion de projet", "UML", "Spécifications", "Documentation technique", "Manuel utilisateur"],
+  },
+  {
+    title: "UX/UI & accessibilité",
+    icon: FileCode2,
+    skills: ["UX/UI", "Figma", "Maquettage", "RGAA", "WCAG", "W3C", "Audit d’interface"],
+  },
+  {
+    title: "Méthodes & management",
+    icon: MonitorCog,
+    skills: ["Management", "Méthodologies Agiles", "Scrum", "Kanban", "Gestion de projet", "Jira"],
+  },
+  {
+    title: "Domaines métier",
+    icon: Code2,
+    skills: ["Applications métier", "Automates", "Control Expert", "FBD", "CAO", "Outils internes"],
   },
 ]
 
@@ -51,8 +73,8 @@ export function Skills() {
     <section id="skills" className="scroll-mt-24 border-y border-pink-100 bg-white/64 py-24">
       <div className="container-custom">
         <div className="mb-12 max-w-3xl">
-          <p className="section-kicker">Technos</p>
-          <h2 className="section-title mt-3">Deux axes forts, puis tout ce qui les rend fiables.</h2>
+          <p className="section-kicker">Compétences</p>
+          <h2 className="section-title mt-3">Une base full-stack et maîtrisée.</h2>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-2">
@@ -60,8 +82,7 @@ export function Skills() {
             <article key={stack.title} className="kawaii-panel p-6 md:p-8">
               <div className="mb-8 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="font-display text-3xl font-black text-[#3d2230]">{stack.title}</h3>
-                  <p className="mt-2 max-w-md text-sm leading-6 text-[#7a5265]">{stack.subtitle}</p>
+                  <h3 className="font-display text-3xl font-black text-foreground">{stack.title}</h3>
                 </div>
                 <FileCode2 className="mt-1 text-pink-400" size={28} />
               </div>
@@ -83,7 +104,7 @@ export function Skills() {
               <article key={stack.title} className="kawaii-panel p-5">
                 <div className="mb-4 flex items-center gap-3">
                   <Icon size={20} className="text-pink-500" />
-                  <h3 className="font-display text-lg font-bold text-[#3d2230]">{stack.title}</h3>
+                  <h3 className="font-display text-lg font-bold text-foreground">{stack.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {stack.skills.map((skill) => (

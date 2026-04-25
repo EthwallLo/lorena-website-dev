@@ -2,48 +2,47 @@ import { Award, Calendar, GraduationCap } from "lucide-react"
 
 const education = [
   {
-    degree: "Manager des Systèmes d’Information et du Numérique",
-    institution: "Grenoble École de Management",
-    period: "Août 2021 - sept. 2023",
-    details: "Project management, gouvernance SI, risques, sécurité, marketing digital et économie du numérique.",
-  },
-  {
     degree: "Mastère spécialisé Big Data",
     institution: "Grenoble INP - Ensimag",
-    period: "Sept. 2023 - déc. 2023",
+    period: "Sept. 2023 - Déc. 2023",
     details: "Apprentissage statistique, data mining, web des données, IA et visualisation de l’information.",
+  },
+  {
+    degree: "Manager des Systèmes d’Information et du Numérique",
+    institution: "Grenoble École de Management",
+    period: "Août 2021 - Sept. 2023",
+    details: "Project management, gouvernance SI, risques, sécurité, marketing digital et économie du numérique.",
   },
   {
     degree: "Bachelor Responsable en Ingénierie des Logiciels",
     institution: "CESI",
-    period: "Oct. 2020 - sept. 2021",
+    period: "Oct. 2020 - Sept. 2021",
     details: "Analyse UML, développement objet, applications mobiles, gestion de projet et sécurité applicative.",
   },
   {
     degree: "BTS Systèmes Numériques, Informatique et Réseaux",
     institution: "Lycée du Grésivaudan",
-    period: "2018 - 2020",
+    period: "Sept. 2018 - Sept. 2020",
     details: "Linux, Windows, réseaux, C, C++, Java, HTML, PHP, MySQL, systèmes embarqués et UML.",
   },
 ]
 
 const certifications = [
-  "Python 3 Programming, University of Michigan",
-  "Accessibility and Inclusive Design, University of Illinois",
+  "Spécialisation Python 3 Programming",
+  "Accessibility and Inclusive Design",
   "Certification Le Robert",
-  "CCNA Introduction aux Réseaux",
+  "CCNA Routing & Switching : Introduction aux Réseaux",
+  "Test of English for International Communication (TOEIC) (960/990)",
+  "Japanese-Language Proficiency Test (JLPT) N4",
+  "Test of Proficiency in Korean (TOPIK) Level 1",
 ]
 
 export function Education() {
   return (
     <section id="education" className="container-custom scroll-mt-24 py-24">
       <div className="mb-12 max-w-3xl">
-        <p className="section-kicker">Formation</p>
-        <h2 className="section-title mt-3">Un socle logiciel, projet et data.</h2>
-        <p className="mt-5 text-base leading-8 text-[#7a5265]">
-          Mon parcours est surtout construit autour de l’ingénierie logicielle, des systèmes
-          d’information, de la donnée et de la gestion de projet.
-        </p>
+        <p className="section-kicker">Formations</p>
+        <h2 className="section-title mt-3">Une expertise logicielle, data et projet.</h2>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
@@ -54,7 +53,7 @@ export function Education() {
                 <GraduationCap size={22} />
               </div>
               <div>
-                <h3 className="font-display text-xl font-bold text-[#3d2230]">{item.degree}</h3>
+                <h3 className="font-display text-xl font-bold text-foreground">{item.degree}</h3>
                 <p className="mt-1 font-semibold text-pink-600">{item.institution}</p>
                 <p className="mt-3 inline-flex items-center gap-2 text-sm text-[#8a6475]">
                   <Calendar size={15} className="text-pink-400" />
@@ -71,7 +70,7 @@ export function Education() {
             <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-pink-100 text-pink-500">
               <Award size={20} />
             </div>
-            <h3 className="font-display text-xl font-bold text-[#3d2230]">Certifications</h3>
+            <h3 className="font-display text-xl font-bold text-foreground">Certifications</h3>
           </div>
           <div className="grid gap-3">
             {certifications.map((certification) => (

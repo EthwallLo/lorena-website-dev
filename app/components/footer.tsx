@@ -39,7 +39,7 @@ export function Footer() {
               />
             </div>
             <div>
-              <p className="font-display text-lg font-bold text-[#3d2230]">Lorena Guedouani</p>
+              <p className="font-display text-lg font-bold text-foreground">Lorena Guedouani</p>
               <p className="text-sm text-[#8a6475]">Développeuse freelance</p>
             </div>
           </div>

@@ -11,7 +11,7 @@ const contactMethods = [
   },
   {
     title: "LinkedIn",
-    description: "Pour voir le parcours complet et échanger côté réseau professionnel.",
+    description: "Pour voir mon parcours complet et échanger sur mes réseaux professionnels.",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/lorena-guedouani/",
     label: "Profil LinkedIn",
@@ -35,7 +35,7 @@ export function Contact() {
               <MessageSquare size={24} />
             </div>
             <p className="section-kicker">Contact</p>
-            <h2 className="section-title mt-3">On regarde le sujet ensemble ?</h2>
+            <h2 className="section-title mt-3">On en discute ensemble ?</h2>
             <p className="mt-5 text-base leading-8 text-[#7a5265]">
               Envoyez-moi le contexte, ce qui existe déjà, ce qui bloque et ce que vous aimeriez
               obtenir. Je vous répondrai avec une première lecture concrète du périmètre.
@@ -58,7 +58,7 @@ export function Contact() {
                       <Icon size={21} />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg font-bold text-[#3d2230]">{method.title}</h3>
+                      <h3 className="font-display text-lg font-bold text-foreground">{method.title}</h3>
                       <p className="mt-1 text-sm leading-6 text-[#7a5265]">{method.description}</p>
                       <p className="mt-3 text-sm font-semibold text-pink-600">{method.label}</p>
                     </div>
