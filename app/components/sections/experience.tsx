@@ -68,37 +68,38 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="border-y border-pink-200/10 bg-[#130717]/54 py-24">
+    <section id="experience" className="scroll-mt-24 border-y border-pink-100 bg-white/64 py-24">
       <div className="container-custom">
         <div className="mb-12 max-w-3xl">
-          <p className="section-kicker">Expérience</p>
-          <h2 className="section-title mt-3 text-white">
-            Des outils métier, du back-end, de l’automatisation et du concret.
+          <p className="section-kicker">Parcours</p>
+          <h2 className="section-title mt-3">
+            Des environnements exigeants, beaucoup de concret.
           </h2>
-          <p className="mt-5 text-base leading-8 text-pink-50/72">
-            J’ai beaucoup appris dans les contextes où il faut être précise : legacy, exigences
-            client, documentation, tests, environnements, utilisateurs finaux. C’est cette rigueur
-            technique que j’apporte en mission freelance.
+          <p className="mt-5 text-base leading-8 text-[#7a5265]">
+            J’ai travaillé sur des outils métier, des interfaces, du back-end industriel, des
+            scripts, de la CI/CD, de la documentation et des bases de données. Ce que j’en garde :
+            une vraie habitude du contexte, du legacy et des contraintes réelles.
           </p>
         </div>
 
-        <div className="space-y-5">
+        <div className="relative border-l border-pink-200 pl-5 md:pl-8">
           {experiences.map((exp) => (
-            <article key={`${exp.company}-${exp.title}`} className="soft-panel rounded-xl p-6">
-              <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <article key={`${exp.company}-${exp.title}`} className="relative pb-10 last:pb-0">
+              <span className="absolute -left-[1.62rem] top-1 h-4 w-4 rounded-full border border-pink-300 bg-white md:-left-[2.1rem]" />
+              <div className="kawaii-panel grid gap-5 p-5 lg:grid-cols-[0.82fr_1.18fr]">
                 <div>
-                  <div className="mb-4 inline-flex rounded-lg border border-pink-300/25 bg-pink-300/10 px-3 py-1 text-xs font-bold text-pink-100">
+                  <div className="mb-4 inline-flex rounded-lg bg-pink-100 px-3 py-1 text-xs font-bold text-pink-700">
                     {exp.type}
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-white">{exp.title}</h3>
-                  <p className="mt-2 text-lg font-semibold text-pink-200">{exp.company}</p>
-                  <div className="mt-5 grid gap-2 text-sm text-pink-100/55">
+                  <h3 className="font-display text-2xl font-black text-[#3d2230]">{exp.title}</h3>
+                  <p className="mt-2 text-lg font-semibold text-pink-600">{exp.company}</p>
+                  <div className="mt-5 grid gap-2 text-sm text-[#8a6475]">
                     <span className="inline-flex items-center gap-2">
-                      <Calendar size={16} className="text-pink-300" />
+                      <Calendar size={16} className="text-pink-400" />
                       {exp.period}
                     </span>
                     <span className="inline-flex items-center gap-2">
-                      <MapPin size={16} className="text-pink-300" />
+                      <MapPin size={16} className="text-pink-400" />
                       {exp.location}
                     </span>
                   </div>
@@ -106,8 +107,8 @@ export function Experience() {
 
                 <ul className="space-y-3">
                   {exp.achievements.map((achievement) => (
-                    <li key={achievement} className="flex gap-3 text-sm leading-6 text-pink-50/70">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-pink-300 to-violet-300" />
+                    <li key={achievement} className="flex gap-3 text-sm leading-6 text-[#7a5265]">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" />
                       <span>{achievement}</span>
                     </li>
                   ))}

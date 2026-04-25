@@ -2,14 +2,14 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Heart, Menu, X } from "lucide-react"
 
 const navigation = [
   { name: "Accueil", href: "#hero" },
-  { name: "Approche", href: "#about" },
-  { name: "Expérience", href: "#experience" },
+  { name: "Moi", href: "#about" },
   { name: "Stack", href: "#skills" },
   { name: "Missions", href: "#projects" },
+  { name: "Parcours", href: "#experience" },
   { name: "Formation", href: "#education" },
   { name: "Contact", href: "#contact" },
 ]
@@ -83,8 +83,8 @@ export function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "border-b border-pink-200/10 bg-[#100814]/88 shadow-2xl shadow-fuchsia-950/30 backdrop-blur-xl"
-            : "bg-transparent"
+            ? "border-b border-pink-200/70 bg-white/88 shadow-sm backdrop-blur-xl"
+            : "bg-white/55 backdrop-blur-sm"
         }`}
       >
         <nav className="container-custom">
@@ -95,9 +95,15 @@ export function Header() {
                 event.preventDefault()
                 handleNavClick("#hero", 0)
               }}
-              className="font-display text-lg font-extrabold text-white"
+              className="leading-tight"
             >
-              Lorena <span className="text-pink-300">Guedouani</span>
+              <span className="flex items-center gap-2 font-display text-lg font-extrabold text-[#3d2230]">
+                <Heart size={18} className="fill-pink-300 text-pink-400" />
+                Lorena Guedouani
+              </span>
+              <span className="block pl-7 text-xs font-semibold uppercase tracking-[0.18em] text-pink-500/70">
+                dev freelance
+              </span>
             </Link>
 
             <div className="relative hidden items-center lg:flex">
@@ -113,17 +119,17 @@ export function Header() {
                       event.preventDefault()
                       handleNavClick(item.href, index)
                     }}
-                    className={`rounded-lg px-3 py-2 text-sm transition ${
+                    className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
                       activeSection === item.href.slice(1)
-                        ? "text-pink-200"
-                        : "text-pink-100/70 hover:text-white"
+                        ? "text-pink-600"
+                        : "text-[#7a5265] hover:text-pink-600"
                     }`}
                   >
                     {item.name}
                   </Link>
                 ))}
                 <div
-                  className="absolute bottom-0 h-0.5 rounded-full bg-gradient-to-r from-pink-300 to-violet-300 transition-all duration-300"
+                  className="absolute bottom-0 h-0.5 rounded-full bg-pink-400 transition-all duration-300"
                   style={{
                     width: indicatorStyle.width,
                     transform: `translateX(${indicatorStyle.left}px)`,
@@ -138,14 +144,14 @@ export function Header() {
                 event.preventDefault()
                 handleNavClick("#contact", navigation.length - 1)
               }}
-              className="hidden rounded-lg bg-gradient-to-r from-pink-400 to-violet-400 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-pink-950/30 transition hover:from-pink-300 hover:to-violet-300 lg:inline-flex"
+              className="hidden rounded-lg bg-pink-400 px-4 py-2 text-sm font-bold text-white shadow-sm shadow-pink-200 transition hover:bg-pink-500 lg:inline-flex"
             >
-              Discuter d’un projet
+              Échanger
             </Link>
 
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-pink-200/20 text-pink-100 transition hover:border-pink-300 hover:text-pink-200 lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-pink-200 bg-white text-pink-500 transition hover:border-pink-300 lg:hidden"
               onClick={() => setIsOpen((value) => !value)}
               aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
@@ -156,7 +162,7 @@ export function Header() {
       </header>
 
       {isOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-5 bg-[#100814]/96 px-6 backdrop-blur-xl lg:hidden">
+        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-5 bg-white/96 px-6 backdrop-blur-xl lg:hidden">
           {navigation.map((item, index) => (
             <a
               key={item.name}
@@ -165,7 +171,7 @@ export function Header() {
                 event.preventDefault()
                 handleNavClick(item.href, index)
               }}
-              className="text-2xl font-semibold text-pink-50 transition hover:text-pink-200"
+              className="text-2xl font-semibold text-[#3d2230] transition hover:text-pink-500"
             >
               {item.name}
             </a>

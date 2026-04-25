@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${outfit.variable} h-full scroll-smooth`}>
       <body
-        className="min-h-screen bg-[#100814] font-sans text-pink-50 antialiased"
+        className="min-h-screen bg-[#fff8fc] font-sans text-[#3d2230] antialiased"
         suppressHydrationWarning
       >
         {children}

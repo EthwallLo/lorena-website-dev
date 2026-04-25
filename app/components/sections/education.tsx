@@ -39,47 +39,45 @@ export function Education() {
     <section id="education" className="container-custom scroll-mt-24 py-24">
       <div className="mb-12 max-w-3xl">
         <p className="section-kicker">Formation</p>
-        <h2 className="section-title mt-3 text-white">Un socle logiciel, projet et data.</h2>
-        <p className="mt-5 text-base leading-8 text-pink-50/72">
+        <h2 className="section-title mt-3">Un socle logiciel, projet et data.</h2>
+        <p className="mt-5 text-base leading-8 text-[#7a5265]">
           Mon parcours est surtout construit autour de l’ingénierie logicielle, des systèmes
           d’information, de la donnée et de la gestion de projet.
         </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="space-y-4">
+        <div className="kawaii-panel divide-y divide-pink-100 overflow-hidden">
           {education.map((item) => (
-            <article key={`${item.institution}-${item.degree}`} className="soft-panel rounded-xl p-5">
-              <div className="flex gap-4">
-                <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-pink-300/10 text-pink-200 sm:inline-flex">
-                  <GraduationCap size={22} />
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold text-white">{item.degree}</h3>
-                  <p className="mt-1 font-semibold text-pink-200">{item.institution}</p>
-                  <p className="mt-3 inline-flex items-center gap-2 text-sm text-pink-100/55">
-                    <Calendar size={15} className="text-pink-300" />
-                    {item.period}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-pink-50/68">{item.details}</p>
-                </div>
+            <article key={`${item.institution}-${item.degree}`} className="grid gap-4 p-5 sm:grid-cols-[3rem_1fr]">
+              <div className="hidden h-11 w-11 items-center justify-center rounded-lg bg-pink-100 text-pink-500 sm:inline-flex">
+                <GraduationCap size={22} />
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-bold text-[#3d2230]">{item.degree}</h3>
+                <p className="mt-1 font-semibold text-pink-600">{item.institution}</p>
+                <p className="mt-3 inline-flex items-center gap-2 text-sm text-[#8a6475]">
+                  <Calendar size={15} className="text-pink-400" />
+                  {item.period}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[#7a5265]">{item.details}</p>
               </div>
             </article>
           ))}
         </div>
 
-        <aside className="soft-panel h-fit rounded-xl p-6">
+        <aside className="kawaii-panel h-fit p-6">
           <div className="mb-5 flex items-center gap-3">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-pink-300/10 text-pink-200">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-pink-100 text-pink-500">
               <Award size={20} />
             </div>
-            <h3 className="font-display text-xl font-bold text-white">Certifications</h3>
+            <h3 className="font-display text-xl font-bold text-[#3d2230]">Certifications</h3>
           </div>
           <div className="grid gap-3">
             {certifications.map((certification) => (
               <div
                 key={certification}
-                className="rounded-lg border border-pink-200/10 bg-[#100814]/56 px-4 py-3 text-sm text-pink-50/68"
+                className="rounded-lg border border-pink-100 bg-pink-50 px-4 py-3 text-sm text-[#7a5265]"
               >
                 {certification}
               </div>

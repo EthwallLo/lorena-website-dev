@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #100814;
-  --color-foreground: #fff7fb;
+  --color-background: #fff8fc;
+  --color-foreground: #3d2230;
   --font-sans: var(--font-inter);
   --font-display: var(--font-outfit);
 }
@@ -16,56 +16,67 @@ html {
 }
 
 body {
-  background: #100814;
-  color: #fff7fb;
+  background: #fff8fc;
+  color: #3d2230;
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   letter-spacing: 0;
 }
 
 ::selection {
-  background: rgba(244, 114, 182, 0.36);
-  color: #ffffff;
+  background: rgba(244, 114, 182, 0.28);
+  color: #3d2230;
 }
 
 .container-custom {
-  width: min(100% - 2rem, 72rem);
+  width: min(100% - 2rem, 74rem);
   margin-inline: auto;
 }
 
+.kawaii-bg {
+  background:
+    linear-gradient(90deg, rgba(244, 114, 182, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(244, 114, 182, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #fff8fc 0%, #fff1f8 55%, #ffffff 100%);
+  background-size: 34px 34px, 34px 34px, auto;
+}
+
 .section-kicker {
-  color: #f9a8d4;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  color: #db2777;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .section-title {
+  color: #3d2230;
   font-family: var(--font-outfit), var(--font-inter), Arial, Helvetica, sans-serif;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 800;
-  line-height: 1.05;
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-weight: 850;
+  line-height: 1.02;
 }
 
-.soft-panel {
-  border: 1px solid rgba(244, 114, 182, 0.18);
-  background:
-    linear-gradient(135deg, rgba(88, 28, 135, 0.24), rgba(15, 23, 42, 0.74)),
-    rgba(20, 10, 28, 0.74);
-  box-shadow: 0 24px 80px rgba(49, 15, 60, 0.28);
-  backdrop-filter: blur(14px);
+.kawaii-panel {
+  border: 1px solid rgba(244, 114, 182, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 16px 45px rgba(244, 114, 182, 0.12);
 }
 
-.soft-panel-warm {
-  border: 1px solid rgba(251, 207, 232, 0.2);
-  background:
-    radial-gradient(circle at top left, rgba(244, 114, 182, 0.18), transparent 36%),
-    linear-gradient(135deg, rgba(76, 29, 149, 0.24), rgba(17, 10, 24, 0.82));
+.kawaii-note {
+  border: 1px dashed rgba(219, 39, 119, 0.28);
+  border-radius: 8px;
+  background: #fffafd;
+}
+
+.pink-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(244, 114, 182, 0.55), rgba(216, 180, 254, 0.5), transparent);
 }
 
 .personal-underline {
-  background: linear-gradient(90deg, #f472b6, #c084fc, #f0abfc);
-  background-size: 100% 0.22em;
+  background: linear-gradient(90deg, rgba(244, 114, 182, 0.42), rgba(249, 168, 212, 0.62));
+  background-size: 100% 0.34em;
   background-position: 0 88%;
   background-repeat: no-repeat;
 }

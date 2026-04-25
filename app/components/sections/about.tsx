@@ -1,104 +1,84 @@
-import { Accessibility, Blocks, FileText, Gauge, Heart, RefreshCcw, Workflow } from "lucide-react"
+import { Compass, FileText, Heart, RefreshCcw, ShieldCheck } from "lucide-react"
 
-const services = [
+const principles = [
   {
-    icon: Blocks,
-    title: "Applications métier",
+    icon: Compass,
+    title: "Comprendre avant d’écrire",
     description:
-      "Fonctionnalités sur mesure, interfaces Twig/HTML/CSS/JavaScript, logique back-end et intégration dans des systèmes existants.",
+      "Je commence par le besoin réel, les contraintes, les usages et le petit truc qui bloque mais que personne n’a encore nommé.",
   },
   {
     icon: RefreshCcw,
-    title: "Refactoring sans brutalité",
+    title: "Améliorer sans tout casser",
     description:
-      "Remise à plat progressive, clarification du code, optimisation PostgreSQL et amélioration de la maintenabilité sans casser l’usage.",
+      "J’aime les reprises patientes : lire l’existant, repérer ce qui tient, puis rendre la suite plus propre étape par étape.",
   },
   {
-    icon: Workflow,
-    title: "Automatisation utile",
+    icon: ShieldCheck,
+    title: "Livrer du maintenable",
     description:
-      "Scripts, outils internes, CI/CD, génération de livrables et workflows qui économisent du temps aux équipes.",
-  },
-  {
-    icon: Accessibility,
-    title: "Interfaces accessibles",
-    description:
-      "Analyse, recommandations et prototypage d’interfaces lisibles, robustes et pensées pour de vrais utilisateurs.",
-  },
-  {
-    icon: Gauge,
-    title: "Performance & sécurité",
-    description:
-      "Développement orienté qualité : configuration d’environnements, performance, sécurité applicative et comportement fiable.",
+      "Je préfère une solution un peu sobre mais solide à quelque chose d’impressionnant que personne n’ose toucher ensuite.",
   },
   {
     icon: FileText,
-    title: "Documentation technique",
+    title: "Laisser une trace utile",
     description:
-      "Spécifications, manuels utilisateurs et supports clairs pour que le projet reste compréhensible après livraison.",
+      "Spécifications, documentation, consignes : je laisse de quoi comprendre le pourquoi, pas seulement le comment.",
   },
 ]
 
-const personalNotes = [
-  "Je fais attention aux états vides, aux messages d’erreur, aux parcours un peu fragiles et aux petits endroits où l’utilisateur peut hésiter.",
-  "J’aime comprendre avant de produire : le contexte, les contraintes, les usages réels derrière l’application.",
-  "Je préfère une solution sobre, fiable et maintenable à une démonstration brillante mais difficile à reprendre.",
+const likes = [
+  "les formulaires qui ne se battent pas avec les utilisateurs",
+  "les noms de variables qui disent la vérité",
+  "les tests qui rassurent au lieu de décorer",
+  "les interfaces sobres avec une vraie intention",
 ]
 
 export function About() {
   return (
     <section id="about" className="container-custom scroll-mt-24 py-24">
-      <div className="grid gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
-        <div>
-          <p className="section-kicker">Approche</p>
-          <h2 className="section-title mt-3 text-white">
-            Je construis des applications et outils métier avec méthode, nuance et sens du détail.
+      <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+        <div className="lg:sticky lg:top-28">
+          <p className="section-kicker">Mon approche</p>
+          <h2 className="section-title mt-3">
+            Du code propre, avec un peu de douceur autour.
           </h2>
-          <div className="mt-6 space-y-5 text-base leading-8 text-pink-50/74">
-            <p>
-              Mon parcours mélange développement web, back-end industriel, automatisation, data
-              et conduite de projet. Ça donne une manière de travailler très concrète : comprendre
-              le besoin, cadrer le périmètre, livrer proprement, documenter ce qui doit durer.
-            </p>
-            <p>
-              En freelance, je peux rejoindre un projet existant, créer un module, développer une
-              application interne, clarifier une interface ou automatiser un irritant. Et je garde
-              toujours en tête la personne qui devra utiliser, maintenir ou faire évoluer ce que je livre.
-            </p>
-          </div>
-
-          <div className="mt-8 rounded-2xl border border-pink-200/14 bg-pink-300/7 p-5">
-            <div className="mb-4 flex items-center gap-3 text-pink-100">
-              <Heart size={20} className="text-pink-300" />
-              <h3 className="font-display text-xl font-bold">Ce qui me ressemble</h3>
-            </div>
-            <ul className="space-y-3">
-              {personalNotes.map((note) => (
-                <li key={note} className="flex gap-3 text-sm leading-6 text-pink-50/68">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pink-300" />
-                  <span>{note}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          {services.map((service) => {
-            const Icon = service.icon
-            return (
-              <article
-                key={service.title}
-                className="soft-panel rounded-xl p-5 transition hover:border-pink-300/50"
-              >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-pink-300/10 text-pink-200">
-                  <Icon size={22} />
-                </div>
-                <h3 className="font-display text-lg font-bold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-pink-50/62">{service.description}</p>
-              </article>
-            )
-          })}
+        <div>
+          <div className="mt-5 kawaii-note p-5">
+            <p className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.16em] text-pink-500">
+              <Heart size={16} className="fill-pink-200" />
+              Petites obsessions très pratiques
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {likes.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-lg border border-pink-100 bg-white px-4 py-2 text-sm font-medium text-[#7a5265]"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {principles.map((principle) => {
+              const Icon = principle.icon
+              return (
+                <article key={principle.title} className="kawaii-panel p-5">
+                  <div className="mb-5 flex items-center gap-3">
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-pink-100 text-pink-500">
+                      <Icon size={21} />
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-[#3d2230]">{principle.title}</h3>
+                  </div>
+                  <p className="text-sm leading-6 text-[#7a5265]">{principle.description}</p>
+                </article>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
