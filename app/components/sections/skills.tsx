@@ -11,60 +11,101 @@ import {
 
 const mainStacks = [
   {
-    title: "Front-end & front applicatif",
-    skills: ["HTML5", "CSS3", "JavaScript", "Symfony", "WordPress", "XML"],
+    title: "Front-end & intégration applicative",
+    skills: ["HTML5", "CSS3", "JavaScript", "Symfony/Twig", "WordPress", "XML"],
   },
   {
-    title: "Back-end & logiciel",
-    skills: ["C#", ".NET", "Ada", "PHP", "Python", "Bash", "Java", "SQL"],
+    title: "Back-end & développement logiciel",
+    skills: ["C#", ".NET", "PHP", "Python", "Ada", "Java", "SQL", "Bash"],
   },
 ]
 
 const supportStacks = [
   {
-    title: "Bases de données",
+    title: "Bases de données & optimisation",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "Optimisation", "Refactorisation", "Modélisation"],
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "SQL",
+      "Modélisation",
+      "Refactorisation",
+      "Optimisation",
+    ],
   },
   {
-    title: "Tests & qualité",
+    title: "Tests, qualité & fiabilité",
     icon: ShieldCheck,
-    skills: ["TDD", "FlaUI", "SpecFlow", "Tests automatisés", "Tests unitaires", "Non-régression", "Refactoring"],
+    skills: [
+      "TDD",
+      "Tests unitaires",
+      "Tests automatisés",
+      "SpecFlow",
+      "FlaUI",
+      "Non-régression",
+      "Refactoring",
+    ],
   },
   {
-    title: "CI/CD & versioning",
+    title: "DevOps, versioning & environnements",
     icon: GitBranch,
-    skills: ["CI/CD", "Git", "GitHub", "GitLab", "SVN", "Jenkins", "Azure DevOps"],
+    skills: [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "SVN",
+      "CI/CD",
+      "Jenkins",
+      "Azure DevOps",
+      "Docker",
+    ],
   },
   {
-    title: "Outils & environnements",
-    icon: MonitorCog,
-    skills: ["Docker", "VirtualBox", "VMWare", "Windows", "Linux", "Jira", "Office", "LaTeX"],
-  },
-  {
-    title: "Automatisation & data",
+    title: "Outils, systèmes & automatisation",
     icon: Terminal,
-    skills: ["Python", "PyQt", "Bash", "Multithreading", "Reporting", "Comparaison de binaires"],
+    skills: [
+      "Windows",
+      "Linux",
+      "VirtualBox",
+      "VMWare",
+      "Bash",
+      "Python",
+      "PyQt",
+      "Multithreading",
+      "Reporting",
+    ],
   },
   {
-    title: "Cadrage & documentation",
+    title: "Cadrage, documentation & méthodes projet",
     icon: Brain,
-    skills: ["Analyse du besoin", "Gestion de projet", "UML", "Spécifications", "Documentation technique", "Manuel utilisateur"],
+    skills: [
+      "Analyse du besoin",
+      "Gestion de projet",
+      "UML",
+      "Spécifications",
+      "Documentation technique",
+      "Manuel utilisateur",
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Jira",
+    ],
   },
   {
-    title: "UX/UI & accessibilité",
+    title: "UX/UI, accessibilité & domaines métier",
     icon: FileCode2,
-    skills: ["UX/UI", "Figma", "Maquettage", "RGAA", "WCAG", "W3C", "Audit d’interface"],
-  },
-  {
-    title: "Méthodes & management",
-    icon: MonitorCog,
-    skills: ["Management", "Méthodologies Agiles", "Scrum", "Kanban", "Gestion de projet", "Jira"],
-  },
-  {
-    title: "Domaines métier",
-    icon: Code2,
-    skills: ["Applications métier", "Automates", "Control Expert", "FBD", "CAO", "Outils internes"],
+    skills: [
+      "UX/UI",
+      "Figma",
+      "Maquettage",
+      "RGAA",
+      "WCAG",
+      "W3C",
+      "Audit d’interface",
+      "Applications métier",
+      "Control Expert",
+      "Langages automates (FBD, Ladder...)",
+    ],
   },
 ]
 
@@ -74,7 +115,7 @@ export function Skills() {
       <div className="container-custom">
         <div className="mb-12 max-w-3xl">
           <p className="section-kicker">Compétences</p>
-          <h2 className="section-title mt-3">Une base full-stack et maîtrisée.</h2>
+          <h2 className="section-title mt-3">Des compétences techniques au service de projets concrets.</h2>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-2">

@@ -4,7 +4,7 @@ const experiences = [
   {
     title: "Développeuse PHP / Symfony",
     company: "Eviden",
-    location: "Grenoble · hybride",
+    location: "Grenoble · Hybride",
     period: "Nov. 2025 - aujourd’hui",
     type: "CDI",
     achievements: [
@@ -16,47 +16,9 @@ const experiences = [
     ],
   },
   {
-    title: "Développeuse C# / .NET",
-    company: "Eviden",
-    location: "Grenoble · sur site",
-    period: "Fév. 2024 - nov. 2025",
-    type: "CDI",
-    achievements: [
-      "Interface de CAO pour automates Schneider Control Expert dans le contexte EPR2.",
-      "Automatisation de création de programmes automates FBD.",
-      "Développement C#/.NET en MVC puis MVVM, interfaces XAML, XML et WPF.",
-      "Spécifications fonctionnelles et techniques, documentation interne et tests automatisés avec FlaUI et SpecFlow.",
-    ],
-  },
-  {
-    title: "Data Analyst & développeuse back-end",
-    company: "ESRF - The European Synchrotron",
-    location: "Grenoble · sur site",
-    period: "Sept. 2023 - déc. 2023",
-    type: "Alternance",
-    achievements: [
-      "Développement Python, multithreading et conduite du changement.",
-      "Mise en place d’intégration continue et tests automatiques.",
-      "Création d’une interface PyQt de gestion de version Git/SVN.",
-    ],
-  },
-  {
-    title: "Cheffe de projet SI & développeuse back-end",
-    company: "Schneider Electric / Itris Automation",
-    location: "Grenoble · sur site",
-    period: "Sept. 2018 - sept. 2023",
-    type: "Alternance",
-    achievements: [
-      "Développement Ada, PHP, scripts Bash et outils internes d’automatisation.",
-      "Pilotage CI/CD back-end, machines virtuelles et scripts de reporting de binaires.",
-      "Prototypage Figma, recommandations d’accessibilité web et documentation de l’existant.",
-      "Administration réseau, PXE et projets de parseurs pour automates industriels.",
-    ],
-  },
-  {
     title: "Correctrice - relectrice",
     company: "Au mot juste",
-    location: "Grenoble · à distance",
+    location: "Grenoble · À distance",
     period: "Janv. 2026 - aujourd’hui",
     type: "Freelance",
     achievements: [
@@ -64,6 +26,44 @@ const experiences = [
       "Une exigence utile côté dev : documentation claire, écrans compréhensibles et consignes lisibles.",
       "Pour les particuliers, professionnels et maisons d'édition : vérification des informations, réécriture, mise en page, relecture.",
       "Pour des documents personnels (CV, documents administratifs), des travaux universitaires (mémoire, projets de recherche), ou encore des manuscrits ou contenus web."
+    ],
+  },
+  {
+    title: "Développeuse C# / .NET",
+    company: "Eviden",
+    location: "Grenoble · Sur site",
+    period: "Fév. 2024 - Nov. 2025",
+    type: "CDI",
+    achievements: [
+      "Interface de CAO pour automates Schneider Control Expert dans le contexte EPR2.",
+      "Automatisation de création de programmes automates FBD.",
+      "Développement C# / .NET en MVC puis MVVM, interfaces XAML, XML et WPF.",
+      "Spécifications fonctionnelles et techniques, documentation interne et tests automatisés avec FlaUI et SpecFlow.",
+    ],
+  },
+  {
+    title: "Data Analyst & développeuse back-end",
+    company: "ESRF - The European Synchrotron",
+    location: "Grenoble · Sur site",
+    period: "Sept. 2023 - Déc. 2023",
+    type: "Alternance",
+    achievements: [
+      "Développement Python, multithreading et conduite du changement.",
+      "Mise en place d’intégration continue et tests automatiques.",
+      "Création d’une interface PyQt de gestion de version Git / SVN.",
+    ],
+  },
+  {
+    title: "Cheffe de projet SI & développeuse back-end",
+    company: "Schneider Electric / Itris Automation",
+    location: "Grenoble · Sur site",
+    period: "Sept. 2018 - Sept. 2023",
+    type: "Alternance",
+    achievements: [
+      "Développement Ada, PHP, scripts Bash et outils internes d’automatisation.",
+      "Pilotage CI/CD back-end, machines virtuelles et scripts de reporting de binaires.",
+      "Prototypage Figma, recommandations d’accessibilité web et documentation de l’existant.",
+      "Administration réseau, PXE et projets de parseurs pour automates industriels.",
     ],
   },
 ]
@@ -75,7 +75,7 @@ export function Experience() {
         <div className="mb-12 max-w-3xl">
           <p className="section-kicker">Parcours</p>
           <h2 className="section-title mt-3">
-            Des expériences concrètes dans des environnements exigeants.
+            Des expériences concrètes, dans des environnements exigeants.
           </h2>
         </div>
 
